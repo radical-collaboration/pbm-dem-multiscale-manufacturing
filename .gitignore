@@ -251,6 +251,13 @@ TSWLatexianTemp*
 *.out
 *.app
 
+#Dumped output data file
+output_test.txt
+
+# Excluded folders
+src/twoway_PBM/csvDump
+src/twoway_PBM/txtDump
+
 # CodeBlocks files excluding project
 *.layout
 *.depend

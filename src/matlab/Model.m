@@ -28,8 +28,8 @@ solidDensity=476; % kg/m3
 liquidDensity=1000; % kg/m3
 
 % Process
-premixingTime=45; % seconds
-liquidAdditionTime =45;  % seconds
+premixingTime=5; % seconds
+liquidAdditionTime =25;  % seconds
 throughput=15; % kg/hr
 liquidToSolidRatio=0.35;
 particleResidenceTime=20; % seconds %11.07
@@ -424,7 +424,7 @@ plot(Time', totalVolumeAllCompartmentsOverTime(1:timeIndex-1,1),'LineWidth',2,'C
 hold on
 plot(Time', totalVolumeAllCompartmentsOverTime(1:timeIndex-1,2),'LineWidth',2,'Color','r');
 hold on
-plot(Time', totalVolumeAllCompartmentsOverTime(1:timeIndex-1,3),'LineWidth',2,'Color','b');
+dplot(Time', totalVolumeAllCompartmentsOverTime(1:timeIndex-1,3),'LineWidth',2,'Color','b');
 hold on
 
 hLegend = legend('Compartment_{1}','Compartment_{2}','Compartment_{3}','Location','NorthWest','FontName','Georgia','FontSize',14);
