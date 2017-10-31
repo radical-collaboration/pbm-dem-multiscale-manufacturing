@@ -57,7 +57,7 @@ int main(int argc, char *argv[])
         if (argc < 3)
         {
             cout << "Core and Diameter values aren't available as input parameters" << endl;
-            int mpi_err = 1;
+            int mpi_err = 0;
             MPI_Abort(MPI_COMM_WORLD, mpi_err);
         }
     }
@@ -455,7 +455,7 @@ int main(int argc, char *argv[])
         cout << "My process id = " << mpi_id << endl;
         cout << "Diameter data is missing in LIGGGHTS output file" << endl;
         cout << "Input parameters for DEM core and diameter aren't matching with LIGGGHTS output file" << endl;
-        int mpi_err = 1;
+        int mpi_err = 0;
         MPI_Abort(MPI_COMM_WORLD, mpi_err);
     }
 
@@ -465,7 +465,7 @@ int main(int argc, char *argv[])
         cout << "My process id = " << mpi_id << endl;
         cout << "Impact data is missing in LIGGGHTS output file" << endl;
         cout << "Input parameters for DEM core and diameter aren't matching with LIGGGHTS output file" << endl;
-        int mpi_err = 1;
+        int mpi_err = 0;
         MPI_Abort(MPI_COMM_WORLD, mpi_err);
     }
 
@@ -475,7 +475,7 @@ int main(int argc, char *argv[])
         cout << "My process id = " << mpi_id << endl;
         cout << "Collision data is missing in LIGGGHTS output file" << endl;
         cout << "Input parameters for DEM core and diameter aren't matching with LIGGGHTS output file" << endl;
-        int mpi_err = 1;
+        int mpi_err = 0;
         MPI_Abort(MPI_COMM_WORLD, mpi_err);
     }
     // ************ read liggghts files end ******************
@@ -741,7 +741,7 @@ int main(int argc, char *argv[])
 
         if (nanCount)
         {
-            int mpi_err = 1;
+            int mpi_err = 0;
             cout << endl;
             cout << "My process id = " << mpi_id << endl;
             cout << "*****fAllCompartments has " << nanCount << " nan values******" << endl;
@@ -752,7 +752,7 @@ int main(int argc, char *argv[])
         minfAll = getMinimumOf3DArray(fAllCompartments);
         if (minfAll < 0.0)
         {
-            int mpi_err = 1;
+            int mpi_err = 0;
             cout << endl;
             cout << "My process id = " << mpi_id << endl;
             cout << "minfAll" << minfAll << endl;
